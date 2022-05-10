@@ -15,9 +15,11 @@
         }
 
         .left{
-            background-color: black;
-            background-image: url('./Imagens/Login.jpg');
+            background-color: white;
+            background-image: url('./Imagens/Login.png');
+            background-position-y: center;
             background-repeat: no-repeat;
+            background-size: 100%;
             width: 50%;
             height: 970px;
             float: left;
@@ -51,11 +53,13 @@
             margin-top: 50px;
             margin-left:15%;
             width: 70%;
-            height: 50px;
+            height: 70px;
             border-radius: 20px;
             text-align: center;
             font-size: 30px;
-            background-color: #0aeeff;
+            background-color: #25a5ae;
+            border: none;
+            color:white;
         }
 
         .button-login{
@@ -64,17 +68,37 @@
             margin-right: 45%;
             width: 25%;
             height: 50px;
-            border-radius: 20px;
-            background-color: blue;
+            border-radius: 15px;
+            background-color: #10475D;
             color:white;
             font-size: 30px;
+            font-weight: bolder;
+        }
+
+        ::placeholder {
+            color: white;
+            font-weight: bolder;
+            opacity: 1; /* Firefox */
+        }
+
+        #di_login{
+            width: 200px;
+            margin: 100px;
+        }
+
+        #texto_login{
+            margin-top: 570px;
+            margin-left: 190px;
+            color:#10475D;
+            font-family: "Eras ITC", "Eras BOld ITC",  sans-serif;
+            font-size: 40px;
         }
     </style>
     <body>
         <div class="left">
-            <img src=""/>
-
-            addihiuhfi
+            <img id="di_login" src="./Imagens/di.png"/>
+            
+            <h2 id="texto_login"> Departamento de Informática </h2>
         </div>
 
         <div class="right">
