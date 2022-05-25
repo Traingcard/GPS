@@ -22,6 +22,20 @@
             height: 100px;
         }
 
+        #img-header{
+            width: 190px;
+            margin: 7.5px;
+            float: left;
+        }
+
+        #header-login{
+            margin-top: 12.5px;
+            margin-right: 20px;
+            font-size: 4em;
+            float: right;
+            text-decoration: none;
+        }
+
         .pag{
             background-color: white;
             width: 100%;
@@ -31,20 +45,43 @@
             width: 96%;
             height: 450px;
             padding: 2%;
-            background-color: gray;
+            background-color: rgba(128, 128, 128, 0.603);
         }
         .logo{
             background-color: red;
-            width: 400px;
-            height: 400px;
+            width: 450px;
+            height: 450px;
             border-radius: 100%;
+            margin-left: 150px;
+            float: left;
         }   
+
+        .banner{
+            width: 800px;
+            margin-top: 160px;
+            overflow: hidden;
+        }
+
+        #banner-titulo{
+            font-size: 3.5em;
+            float: right;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight:bolder;
+        }
+
+
+
+        
         .introducao{
-            width: 96%;
+            width: 100%;
             height: auto;
-            padding: 2%;
             background-color: white;
         }
+
+
+
+
         .img{
             position: relative;
             width: 100%;
@@ -87,7 +124,8 @@
     <body>
 
         <div class="header">
-            <h1 style="font-size:100px;">Logo curso / hiperligacao / login</h1>
+            <img src="Imagens/di.png" id="img-header">
+            <a href="login.html" id="header-login"> Login </a>
         </div>
 
         <div class="pag">
@@ -95,9 +133,18 @@
                 <div class="logo">
 
                 </div>
-                <div></div>
+                <div class="banner">
+                    <div id="banner-titulo">
+                        Desenvolvimento para a Web e Dipositivos Móveis (CTeSP)
+    
+                    </div>
+                </div>
+               
             </div>
             <div class="introducao">
+                <div>
+                    
+                </div>
                 <h2>Introdução</h2>
                 <br>
                 <h3>Descrição Geral</h3>
