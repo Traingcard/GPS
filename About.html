@@ -10,9 +10,8 @@
 
 
     <style>
-        *{
+        body{      
             margin: auto;
-            padding: auto;
             font-family: Arial, Helvetica, sans-serif;
         }     
 
@@ -54,6 +53,7 @@
             border-radius: 100%;
             margin-left: 150px;
             float: left;
+            margin-right: 200px;
         }   
 
         .banner{
@@ -70,52 +70,45 @@
             font-weight:bolder;
         }
 
+        #h2introducao{
+            margin: 50px;
+        }
 
+        #texto-introducao{
+            margin: 50px;
+            letter-spacing: 1.5px;
+            font-size: 1.5em;
+        }
 
-        
-        .introducao{
+        .meiopag{
             width: 100%;
-            height: auto;
-            background-color: white;
+            height: 550px;
+            background-image: url("Imagens/ESTGV.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-y: -500px;
         }
 
 
 
-
-        .img{
-            position: relative;
-            width: 100%;
-            height: 500px;
-            background-color: blue;
-            overflow: hidden;
-        }
-        .imgIt{
-            width: 100%;
-            position: absolute;
-            margin: auto;
-            top: -9999px;
-            bottom: -9999px;
-        }
         .ingresso{
-            width: 94,2%;
+            width: 100%;
             height: auto;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            margin-left: 50px;
-            margin-right: 50px;
-            background-color: gray;
-            padding: 2%;
             color: white;
+            overflow: hidden
         }
-        .plano{
-            width: 100%;
-            height: auto;
-            background-color: pink;
+
+        #texto-ingresso{
+            background-color: grey;
+            margin: 100px;
+            padding: 100px;
+            letter-spacing: 1.5px;
+            font-size: 1.5em;
         }
-        .footer{
-            background-color: gray;
-            width: 100%;
-            height: 100px;
+
+        #h2-ingresso{
+            text-align: center;
+            margin-top: 0pxx;
         }
 
     </style>
@@ -142,41 +135,26 @@
                
             </div>
             <div class="introducao">
-                <div>
-                    
-                </div>
-                <h2>Introdução</h2>
-                <br>
-                <h3>Descrição Geral</h3>
-                <h3>Gerir e desenvolver projetos que visem a criação e o desenvolvimento de soluções informáticas a veicular na Web ou especificamente em dispositivos móveis, incluindo a conceção das respetivas interfaces e a produção dos conteúdos a incluir.</h3>
-                <br>
-                <h3>Programa BrightStart (Deloitte)</h3>   
-                <h3>O Programa BrightStart é uma iniciativa da Escola Superior de Tecnologia e Gestão de Viseu, pertencente ao Instituto Politécnico de Viseu, com a Deloitte.</h3>
-                <br>
-                <h3>Conhece o programa BrightStart, que te permite tirar uma licenciatura na área das Tecnologias Informáticas e ter uma experiência em ambiente real de trabalho.</h3>
-            </div>
-            <div class="img">
-                <img class="imgIt" src="../GPS/Imagens/a.png">
-            </div>
-            <div class="ingresso">
-                <h2>Ingresso</h2>
-                <br>
-                <h3>1. Podem candidatar-se ao acesso de um Curso Técnico Superior Profissional (CTeSP) da ESTGV:</h3>
-                <br>
-                <h3>a.Os titulares de um curso de ensino secundário ou de habilitação legalmente equivalente;</h3>
-                <h3>b.Os que tenham sido aprovados nas provas especialmente adequadas, destinadas a avaliar a capacidade para a frequência do ensino superior dos maiores de 23 anos, realizadas, para o curso em causa, nos termos do Decreto-Lei n.º 64/2006, de 21 de março, alterado pelo Decreto-Lei n.º 113/2014, de 16 de julho, e pelo Decreto-Lei n.º 63/2016, de 13 de setembro.</h3>
-                <br>
-                <h3>2. Podem igualmente candidatar-se ao acesso aos Cursos Técnicos Superiores Profissionais os titulares de um diploma de especialização tecnológica, de um diploma de técnico superior profissional ou de um grau de ensino superior.</h3>
-                <br>
-                <h3>Para informações relacionadas com o acesso ao CTeSP em Desenvolvimento para a Web e Dispositivos Móveis, por favor, consulte o Edital respetivo.</h3>
-            </div>
-            <div class="plano">
-                <h1 style="font-size:100px;">plano corricular</h1>
-            </div>
-        </div>
-        
-        
+ 
+                    <h2 id="h2introducao">Introdução</h2>
 
+                    <div id="texto-introducao"> <p></p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis turpis ac est sodales ornare. Etiam purus nisi, tristique suscipit mollis posuere, interdum vitae lectus. Duis risus velit, finibus et tortor in, aliquet cursus sem. Praesent nulla massa, pharetra id fringilla vel, commodo a arcu. Etiam egestas a augue vel mollis. Nam pellentesque malesuada quam nec vulputate. Nunc et gravida arcu. Maecenas ac dui id massa aliquet imperdiet quis non ligula. Integer placerat magna vitae mollis faucibus. Vivamus mattis ex nibh, ut ullamcorper velit sodales quis. Duis ac mollis odio. Suspendisse vestibulum, magna sit amet posuere efficitur, neque mauris malesuada leo, a convallis enim mauris at risus. Fusce varius dignissim porttitor. Ut vel euismod lectus, laoreet lacinia est. Etiam lectus est, iaculis id enim id, tristique scelerisque magna.</div>
+            </div>
+            <div class="meiopag">
+
+            </div>
+
+            <div class="ingresso">
+
+                <div id="texto-ingresso">
+                    <h2 id="h2-ingresso"> Ingresso </h2>
+
+                
+ásdasdsaLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis turpis ac est sodales ornare. Etiam purus nisi, tristique suscipit mollis posuere, interdum vitae lectus. Duis risus velit, finibus et tortor in, aliquet cursus sem. Praesent nulla massa, pharetra id fringilla vel, commodo a arcu. Etiam egestas a augue vel mollis. Nam pellentesque malesuada quam nec vulputate. Nunc et gravida arcu. Maecenas ac dui id massa aliquet imperdiet quis non ligula. Integer placerat magna vitae mollis faucibus. Vivamus mattis ex nibh, ut ullamcorper velit sodales quis. Duis ac mollis odio. Suspendisse vestibulum, magna sit amet posuere efficitur, neque mauris malesuada leo, a convallis enim mauris at risus. Fusce varius dignissim porttitor. Ut vel euismod lectus, laoreet lacinia est. Etiam lectus est, iaculis id enim id, tristique scelerisque magnaLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis turpis ac est sodales ornare. Etiam purus nisi, tristique suscipit mollis posuere, interdum vitae lectus. Duis risus velit, finibus et tortor in, aliquet cursus sem. Praesent nulla massa, pharetra id fringilla vel, commodo a arcu. Etiam egestas a augue vel mollis. Nam pellentesque malesuada quam nec vulputate. Nunc et gravida arcu. Maecenas ac dui id massa aliquet imperdiet quis non ligula. Integer placerat magna vitae mollis faucibus. Vivamus mattis ex nibh, ut ullamcorper velit sodales quis. Duis ac mollis odio. Suspendisse vestibulum, magna sit amet posuere efficitur, neque mauris malesuada leo, a convallis enim mauris at risus. Fusce varius dignissim porttitor. Ut vel euismod lectus, laoreet lacinia est. Etiam lectus est, iaculis id enim id, tristique scelerisque magna
+</div>           
+</div>
+        
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <div class="footer ">
             <h1 style="font-size:100px;">Footer</h1>
         </div>
