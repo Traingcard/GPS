@@ -121,7 +121,7 @@
 
 
       
-        table{
+        #table-horarios{
             background-color: grey;
             width: 1500px;
             text-align: center;
@@ -150,10 +150,19 @@
             vertical-align: center;
         }
 
+
         #horario-titulo{
             margin-top: 100px;
             text-align: center;
             margin-bottom: 30px;
+        }
+
+        #texto-contactar{
+            width: 33%;
+            font-size: 50px;
+            margin-left: 12.5%;
+            overflow: hidden;
+            float: left;
         }
 
         .form{
@@ -161,11 +170,32 @@
             height: 600px;
             background-color: blue;
             margin-top: 100px;
+            padding-top: 5%;
         }
 
         .formulario{
-            
-            background-color: black;
+            margin-top: 100px;
+            margin-left:12.5%;
+            width: 75%;
+            height: auto;
+            background-color: rgba(128, 128, 128, 0.537);    
+        }
+
+        .input-form{
+            margin-left:50%;
+            margin-top: 50px;
+            width: 70%;
+            height: 50px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 30px;
+            background-color: #84ff00;
+            border: none;
+            color:black;
+        }
+        
+        #tabela-form{
+            align-items: right;
         }
 
         footer{
@@ -215,9 +245,9 @@
                     <h2 id="h2-ingresso"> Ingresso </h2>
 
                 
-ásdasdsaLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis turpis ac est sodales ornare. Etiam purus nisi, tristique suscipit mollis posuere, interdum vitae lectus. Duis risus velit, finibus et tortor in, aliquet cursus sem. Praesent nulla massa, pharetra id fringilla vel, commodo a arcu. Etiam egestas a augue vel mollis. Nam pellentesque malesuada quam nec vulputate. Nunc et gravida arcu. Maecenas ac dui id massa aliquet imperdiet quis non ligula. Integer placerat magna vitae mollis faucibus. Vivamus mattis ex nibh, ut ullamcorper velit sodales quis. Duis ac mollis odio. Suspendisse vestibulum, magna sit amet posuere efficitur, neque mauris malesuada leo, a convallis enim mauris at risus. Fusce varius dignissim porttitor. Ut vel euismod lectus, laoreet lacinia est. Etiam lectus est, iaculis id enim id, tristique scelerisque magnaLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis turpis ac est sodales ornare. Etiam purus nisi, tristique suscipit mollis posuere, interdum vitae lectus. Duis risus velit, finibus et tortor in, aliquet cursus sem. Praesent nulla massa, pharetra id fringilla vel, commodo a arcu. Etiam egestas a augue vel mollis. Nam pellentesque malesuada quam nec vulputate. Nunc et gravida arcu. Maecenas ac dui id massa aliquet imperdiet quis non ligula. Integer placerat magna vitae mollis faucibus. Vivamus mattis ex nibh, ut ullamcorper velit sodales quis. Duis ac mollis odio. Suspendisse vestibulum, magna sit amet posuere efficitur, neque mauris malesuada leo, a convallis enim mauris at risus. Fusce varius dignissim porttitor. Ut vel euismod lectus, laoreet lacinia est. Etiam lectus est, iaculis id enim id, tristique scelerisque magna
-</div>           
-</div>
+                ásdasdsaLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis turpis ac est sodales ornare. Etiam purus nisi, tristique suscipit mollis posuere, interdum vitae lectus. Duis risus velit, finibus et tortor in, aliquet cursus sem. Praesent nulla massa, pharetra id fringilla vel, commodo a arcu. Etiam egestas a augue vel mollis. Nam pellentesque malesuada quam nec vulputate. Nunc et gravida arcu. Maecenas ac dui id massa aliquet imperdiet quis non ligula. Integer placerat magna vitae mollis faucibus. Vivamus mattis ex nibh, ut ullamcorper velit sodales quis. Duis ac mollis odio. Suspendisse vestibulum, magna sit amet posuere efficitur, neque mauris malesuada leo, a convallis enim mauris at risus. Fusce varius dignissim porttitor. Ut vel euismod lectus, laoreet lacinia est. Etiam lectus est, iaculis id enim id, tristique scelerisque magnaLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis turpis ac est sodales ornare. Etiam purus nisi, tristique suscipit mollis posuere, interdum vitae lectus. Duis risus velit, finibus et tortor in, aliquet cursus sem. Praesent nulla massa, pharetra id fringilla vel, commodo a arcu. Etiam egestas a augue vel mollis. Nam pellentesque malesuada quam nec vulputate. Nunc et gravida arcu. Maecenas ac dui id massa aliquet imperdiet quis non ligula. Integer placerat magna vitae mollis faucibus. Vivamus mattis ex nibh, ut ullamcorper velit sodales quis. Duis ac mollis odio. Suspendisse vestibulum, magna sit amet posuere efficitur, neque mauris malesuada leo, a convallis enim mauris at risus. Fusce varius dignissim porttitor. Ut vel euismod lectus, laoreet lacinia est. Etiam lectus est, iaculis id enim id, tristique scelerisque magna
+                </div>           
+            </div>
 
         <div class="form">
 
@@ -229,7 +259,7 @@
 
             <h3 id="horario-titulo"> 1º Ano </h3>
 
-            <table width="1000px">
+            <table id="table-horarios" width="1000px">
                 <tr>
                     <td class="primeiro-semestre">
                         1º Semestre
@@ -250,7 +280,7 @@
 
             <h3 id="horario-titulo"> 2º Ano </h3>
 
-            <table width="1000px">
+            <table id="table-horarios" width="1000px">
                 <tr>
                     <td class="primeiro-semestre">
                         1º Semestre
@@ -270,14 +300,30 @@
             </table>
         </div>
 
-
         <div class="form">
+            
+            <div id="texto-contactar"> Se tens alguma questão 
+                não exites em nos contactar 
+            </div>
+
             <form class="formulario">
-                <input type="email"/>
-                <input type="text"/>
-                <textarea></textarea>
+                
+                <table id="tabela-form">
+                    <tr>
+                        <td> <input class="input-form" type="email" placeholder="Email"/> </td>
+                        
+                    </tr>
+                    <tr>
+                        <td> <input class="input-form" type="text" placeholder="Assunto"/> </td>
+                    </tr>
+                    <tr>
+                        <td align="center"><textarea></textarea></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><input type="submit"></td>
+                    </tr>
+                </table>
             </form>
-    
         </div>
 
                   
