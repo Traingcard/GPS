@@ -171,7 +171,6 @@
             color: white;
             overflow: hidden
         }
-
         .formBox{
             background-color: rgba(128, 128, 128, 0.603);
             margin: 100px;
@@ -180,22 +179,28 @@
             letter-spacing: 1.5px;
             font-size: 1.5em;
             border-radius: 25px;
+            display:flex;
+            height: auto;
         }
-        .ola{
-            background-color: blueviolet;
-            height: 100px;
-            width: 100px;
-        }
-        .formTable{
-            background-color: blue;
+        .leftText{
             height: 100%;
             width: 50%;
-            float: right;
+            padding-left: 50px;
+            padding-top: 190px;
+            font-size: larger;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .formTable{
+            height: 100%;
+            width: auto;
+            flex-grow: 1;
+            padding-left: 65px;
         }
 
         .formImput{
-            margin-top: 10px;
-            width: 300px;
+            margin-top: 20px;
+            width: 500px;
             height: 50px;
             border-radius: 20px;
             text-align: center;
@@ -206,8 +211,8 @@
         }
 
         .formImputText{
-            margin-top: 10px;
-            width: 300px;
+            margin-top: 20px;
+            width: 500px;
             height: 100px;
             border-radius: 20px;
             text-align: center;
@@ -215,11 +220,12 @@
             background-color: white;
             border: none;
             color:black;
+            padding-top: 50px;
         }
 
         .formImputSubmit{
             margin-top: 30px;
-            width: 300px;
+            width: 300px    ;
             height: 50px;
             border-radius: 20px;
             text-align: center;
@@ -228,12 +234,14 @@
             background-color: #25a5ae;
             border: none;
             color:white;
+            margin-left: 13%;
         }
 
         footer{
             background-color: #25a5ae;
             height: 250px;
         }
+        
 
 
 
@@ -360,8 +368,7 @@
 
         <div class="fromDiv">
             <form class="formBox">
-                <div calss="ola"><input class="formImput" type="email" placeholder="Email"/></div>
-                
+                <DIV class="leftText">Em caso de duvidas não exite em perduntar aqui!</DIV>
                 <table class="formTable">
                     <tr>
                         <td><input class="formImput" type="email" placeholder="Email"/></td>
@@ -375,9 +382,6 @@
                     <tr>
                         <td><input class="formImputSubmit" type="submit"></td>
                     </tr>
-                    
-                    
-                    
                 </table>
             </form>
                        
