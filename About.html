@@ -165,42 +165,9 @@
             float: left;
         }
 
-        .form{
-            width: 100%;
-            height: 600px;
-            background-color: blue;
-            margin-top: 100px;
-            padding-top: 5%;
-        }
-
-        .formulario{
-            margin-top: 100px;
-            margin-left:12.5%;
-            width: 75%;
-            height: auto;
-            background-color: rgba(128, 128, 128, 0.537);    
-        }
-
-        .input-form{
-            margin-left:50%;
-            margin-top: 50px;
-            width: 70%;
-            height: 50px;
-            border-radius: 20px;
-            text-align: center;
-            font-size: 30px;
-            background-color: #84ff00;
-            border: none;
-            color:black;
-        }
-        
-        #tabela-form{
-            align-items: right;
-        }
-
         .fromDiv{
             width: 100%;
-            height: 500px;
+            height: auto;
             color: white;
             overflow: hidden
         }
@@ -208,19 +175,63 @@
         .formBox{
             background-color: rgba(128, 128, 128, 0.603);
             margin: 100px;
-            padding-top: 100px;
-            padding-bottom: 100px;
+            padding-top: 50px;
+            padding-bottom: 50px;
             letter-spacing: 1.5px;
             font-size: 1.5em;
             border-radius: 25px;
         }
+        .ola{
+            background-color: blueviolet;
+            height: 100px;
+            width: 100px;
+        }
         .formTable{
-            background-color: #84ff00;
-            margin-left:50% ;
+            background-color: blue;
+            height: 100%;
+            width: 50%;
+            float: right;
+        }
+
+        .formImput{
+            margin-top: 10px;
+            width: 300px;
+            height: 50px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 30px;
+            background-color: white;
+            border: none;
+            color:black;
+        }
+
+        .formImputText{
+            margin-top: 10px;
+            width: 300px;
+            height: 100px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 30px;
+            background-color: white;
+            border: none;
+            color:black;
+        }
+
+        .formImputSubmit{
+            margin-top: 30px;
+            width: 300px;
+            height: 50px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bolder;
+            background-color: #25a5ae;
+            border: none;
+            color:white;
         }
 
         footer{
-            background-color: black;
+            background-color: #25a5ae;
             height: 250px;
         }
 
@@ -349,27 +360,20 @@
 
         <div class="fromDiv">
             <form class="formBox">
+                <div calss="ola"><input class="formImput" type="email" placeholder="Email"/></div>
                 
                 <table class="formTable">
                     <tr>
-                        <td>
-                            <input type="email" placeholder="Email"/>
-                        </td>
+                        <td><input class="formImput" type="email" placeholder="Email"/></td>
                     </tr>
                     <tr>
-                        <td>
-                            <input type="text" placeholder="Assunto"/>
-                        </td>
+                        <td><input class="formImput" type="text" placeholder="Assunto"/></td>
                     </tr>
                     <tr>
-                        <td>
-                            <textarea></textarea>
-                        </td>
+                        <td><textarea class="formImputText" placeholder="Comentário"></textarea></td>
                     </tr>
                     <tr>
-                        <td>
-                            <input type="submit">
-                        </td>
+                        <td><input class="formImputSubmit" type="submit"></td>
                     </tr>
                     
                     
@@ -381,7 +385,7 @@
 
                   
         <footer>
-            sefsdf
+            Footer
         </footer>
 
     </body>
