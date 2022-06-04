@@ -56,6 +56,11 @@
             margin-right: 200px;
         }   
 
+        #input-img{
+            margin-top: 200px;
+            margin-left: 50px;
+        }
+
         .banner{
             width: 800px;
             margin-top: 160px;
@@ -74,6 +79,10 @@
             margin: 50px;
         }
 
+        #input-normal{
+            font-size:20px;
+        }
+
         #texto-introducao{
             margin: 50px;
             letter-spacing: 1.5px;
@@ -89,6 +98,10 @@
             background-position-y: -500px;
         }
 
+        #titulo{
+           text-align: center;
+           font-size: 100px;
+        }
 
 
         .ingresso{
@@ -112,15 +125,11 @@
             margin-top: 0pxx;
         }
 
-
-        #por-decidir{
-
+        .horarios{
+            margin-top: -100px;
         }
 
-
-
-
-      
+        
         #table-horarios{
             background-color: grey;
             width: 1500px;
@@ -309,12 +318,12 @@
 
         <div class="pag">
 
-            <div class="cursoBanner">
+                <div class="cursoBanner">
 
         <!-- Adicionar imagem de curso -->
-                <div class="logo">
-                    
-                </div>
+             <div class="logo">
+                   <input id="input-img" type="file"/>
+                </div> 
         
         
                 <div class="banner">
@@ -322,7 +331,7 @@
         <!-- Adicionar nome do curso -->
                     <div id="banner-titulo">
 
-                        Desenvolvimento para a Web e Dipositivos Móveis (CTeSP)
+                        <textarea id="titulo" cols="14" rows="2"></textarea>
     
                     </div>
                 </div>
@@ -333,7 +342,7 @@
  
                     <h2 id="h2introducao">Introdução</h2>
         <!-- Adicionar introdução de curso -->
-                    <div id="texto-introducao"> <p></p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis turpios ac est sodales ornare. Etiam purus nisi, tristique suscipit mollis posuere, interdum vitae lectus. Duis risus velit, finibus et tortor in, aliquet cursus sem. Praesent nulla massa, pharetra id fringilla vel, commodo a arcu. Etiam egestas a augue vel mollis. Nam pellentesque malesuada quam nec vulputate. Nunc et gravida arcu. Maecenas ac dui id massa aliquet imperdiet quis non ligula. Integer placerat magna vitae mollis faucibus. Vivamus mattis ex nibh, ut ullamcorper velit sodales quis. Duis ac mollis odio. Suspendisse vestibulum, magna sit amet posuere efficitur, neque mauris malesuada leo, a convallis enim mauris at risus. Fusce varius dignissim porttitor. Ut vel euismod lectus, laoreet lacinia est. Etiam lectus est, iaculis id enim id, tristique scelerisque magna.</div>
+                    <div id="texto-introducao"> <p></p> <textarea id="input-normal" cols="162" rows="20"></textarea></div>
             </div>
             <div class="meiopag">
 
@@ -346,7 +355,7 @@
 
           <!-- Adicionar ingresso do curso -->  
 
-                ásdasdsaLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis turpis ac est sodales ornare. Etiam purus nisi, tristique suscipit mollis posuere, interdum vitae lectus. Duis risus velit, finibus et tortor in, aliquet cursus sem. Praesent nulla massa, pharetra id fringilla vel, commodo a arcu. Etiam egestas a augue vel mollis. Nam pellentesque malesuada quam nec vulputate. Nunc et gravida arcu. Maecenas ac dui id massa aliquet imperdiet quis non ligula. Integer placerat magna vitae mollis faucibus. Vivamus mattis ex nibh, ut ullamcorper velit sodales quis. Duis ac mollis odio. Suspendisse vestibulum, magna sit amet posuere efficitur, neque mauris malesuada leo, a convallis enim mauris at risus. Fusce varius dignissim porttitor. Ut vel euismod lectus, laoreet lacinia est. Etiam lectus est, iaculis id enim id, tristique scelerisque magnaLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis turpis ac est sodales ornare. Etiam purus nisi, tristique suscipit mollis posuere, interdum vitae lectus. Duis risus velit, finibus et tortor in, aliquet cursus sem. Praesent nulla massa, pharetra id fringilla vel, commodo a arcu. Etiam egestas a augue vel mollis. Nam pellentesque malesuada quam nec vulputate. Nunc et gravida arcu. Maecenas ac dui id massa aliquet imperdiet quis non ligula. Integer placerat magna vitae mollis faucibus. Vivamus mattis ex nibh, ut ullamcorper velit sodales quis. Duis ac mollis odio. Suspendisse vestibulum, magna sit amet posuere efficitur, neque mauris malesuada leo, a convallis enim mauris at risus. Fusce varius dignissim porttitor. Ut vel euismod lectus, laoreet lacinia est. Etiam lectus est, iaculis id enim id, tristique scelerisque magna
+               <textarea id="input-normal" cols="135" rows="20"> </textarea>
                 
             </div>           
             </div>
@@ -374,10 +383,10 @@
                 </tr>
                     <tr>
                         <td class="primeiro-semestre">
-                            Horário 1
+                            <input type="file"/>
                         </td>
                         <td class="segundo-semestre">
-                            Horário 2
+                            <input type="file"/>
                         </td>
                     </tr>
             </table>
@@ -395,10 +404,10 @@
                 </tr>
                     <tr>
                         <td class="primeiro-semestre">
-                            Horário 1
+                            <input type="file"/>
                         </td>
                         <td class="segundo-semestre">
-                            Horário 2
+                            <input type="file"/>
                         </td>
                     </tr>
             </table>
