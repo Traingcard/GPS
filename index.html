@@ -39,15 +39,23 @@
             padding-left: 220px;
             color: black;
         }
-        .DivLogin{
-            background-color: green;
+        .divLogin{
             height: 100%;
+            width: 33%;
             flex: 1;
+            display: flex;
+        }
+        .headerImg{
+            margin-top: 15px;
+            margin-left: 390px;
+            width: auto;
+            height: 60px;
         }
         #img-header{
             width: 150px;
             height: 70px;
             margin: 13px;
+            margin-left: 35px;
         }
         body{
             background-image: url('../GPS/Imagens/a.png');
@@ -111,12 +119,11 @@
             height: 50px;
         }
         .FooterTexto{
-            padding-left: 20px;width: 10px;flex: 1;
+            padding-left: 20px;
+            width: 10px;
+            flex: 1;
         }
-        .headerImg{
-            width: auto;
-            height: 60px;
-        }
+        
         
 
     </style>
@@ -130,12 +137,9 @@
             <div class="divNome">
                 <imput>INSTITUTO POLITÉCNICO DE VISEU</imput>
             </div>
-            <div class="DivLogin">
-                <a href="../GPS/login.html">
-                    <img class="headerImg" src="Imagens/user.png" alt="Departamento de Informática" ><imput class="">Login</imput>
-                </a>
-            </div>
-            
+            <div class="divLogin">
+                <a href="../GPS/login.html"><img class="headerImg" src="Imagens/user.png" alt="Departamento de Informática" ></a>
+            </div>         
         </header>
     
 
@@ -169,7 +173,7 @@
                 
                 <imput class="FooterTexto">Av. Cidade Politécnica, Viseu</imput>
             </div>
-        </footer>
+        </footer> 
 
     </body>
 
