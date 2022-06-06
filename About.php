@@ -1,3 +1,7 @@
+<?php
+    include "./BD/bd.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -54,7 +58,6 @@
             margin-left: 150px;
             float: left;
             margin-right: 200px;
-            background-image: url("Imagens/eisi.png");
             background-size: 100%;
             background-repeat: no-repeat;
             background-position: 0;
@@ -339,26 +342,52 @@
                 <a href="../GPS/login.html"><img class="headerImg" src="Imagens/user.png" alt="Departamento de Informática" ></a>
             </div>         
         </header>
+
+
         <div class="pag">
             <div class="cursoBanner">
-                <div class="logo">
+                <?php
+
+                    $id_curso=$_REQUEST['id_curso'];
+
+                    $select="select * from curso where id_curso = $id_curso";
+                    $result=mysqli_query($ligax,$select);
+                    $registo=mysqli_fetch_assoc($result);
+                    
+                    $id_curso=$registo['id_curso'];
+                    $nome=$registo['nome'];
+                    $introducao=$registo['introducao'];
+                    $ingresso=$registo['ingresso'];
+                    $imagem=$registo['imagem'];
+
+                    echo "<div class='logo' style='background-image: url($imagem);'>"
+                ?>
+                
                 </div>
                 <div class="banner">
                     <div id="banner-titulo">
-                        Desenvolvimento para a Web e Dipositivos Móveis (CTeSP)
+                        <?php 
+                            echo $nome;
+                        ?>
                     </div>
                 </div>
             </div>
             <div class="introducao">
                     <h2 id="h2introducao">Introdução</h2>
-                    <div id="texto-introducao"> <p></p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis turpios ac est sodales ornare. Etiam purus nisi, tristique suscipit mollis posuere, interdum vitae lectus. Duis risus velit, finibus et tortor in, aliquet cursus sem. Praesent nulla massa, pharetra id fringilla vel, commodo a arcu. Etiam egestas a augue vel mollis. Nam pellentesque malesuada quam nec vulputate. Nunc et gravida arcu. Maecenas ac dui id massa aliquet imperdiet quis non ligula. Integer placerat magna vitae mollis faucibus. Vivamus mattis ex nibh, ut ullamcorper velit sodales quis. Duis ac mollis odio. Suspendisse vestibulum, magna sit amet posuere efficitur, neque mauris malesuada leo, a convallis enim mauris at risus. Fusce varius dignissim porttitor. Ut vel euismod lectus, laoreet lacinia est. Etiam lectus est, iaculis id enim id, tristique scelerisque magna.</div>
+                    <div id="texto-introducao"> <p></p>
+                    <?php
+                        echo $introducao;
+                    ?>
+                        </div>
             </div>
             <div class="meiopag">
             </div>
             <div class="ingresso">
                 <div id="texto-ingresso">
                     <h2 id="h2-ingresso"> Ingresso </h2>
-                    ásdasdsaLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis turpis ac est sodales ornare. Etiam purus nisi, tristique suscipit mollis posuere, interdum vitae lectus. Duis risus velit, finibus et tortor in, aliquet cursus sem. Praesent nulla massa, pharetra id fringilla vel, commodo a arcu. Etiam egestas a augue vel mollis. Nam pellentesque malesuada quam nec vulputate. Nunc et gravida arcu. Maecenas ac dui id massa aliquet imperdiet quis non ligula. Integer placerat magna vitae mollis faucibus. Vivamus mattis ex nibh, ut ullamcorper velit sodales quis. Duis ac mollis odio. Suspendisse vestibulum, magna sit amet posuere efficitur, neque mauris malesuada leo, a convallis enim mauris at risus. Fusce varius dignissim porttitor. Ut vel euismod lectus, laoreet lacinia est. Etiam lectus est, iaculis id enim id, tristique scelerisque magnaLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis turpis ac est sodales ornare. Etiam purus nisi, tristique suscipit mollis posuere, interdum vitae lectus. Duis risus velit, finibus et tortor in, aliquet cursus sem. Praesent nulla massa, pharetra id fringilla vel, commodo a arcu. Etiam egestas a augue vel mollis. Nam pellentesque malesuada quam nec vulputate. Nunc et gravida arcu. Maecenas ac dui id massa aliquet imperdiet quis non ligula. Integer placerat magna vitae mollis faucibus. Vivamus mattis ex nibh, ut ullamcorper velit sodales quis. Duis ac mollis odio. Suspendisse vestibulum, magna sit amet posuere efficitur, neque mauris malesuada leo, a convallis enim mauris at risus. Fusce varius dignissim porttitor. Ut vel euismod lectus, laoreet lacinia est. Etiam lectus est, iaculis id enim id, tristique scelerisque magna
+                    <?php
+                        echo $ingresso;
+                    ?>
                 </div>           
             </div>
         <div class="form">
@@ -369,6 +398,7 @@
             <table id="table-horarios" width="1000px">
                 <tr>
                     <td class="primeiro-semestre">
+                <!--TODO: IR BUSCAR O HORÁRIO DO CURSO QUE SELECIONAMOS NO INDEX E COLOCAR COMO HIPERLIGAÇÃO PARA FAZER DOWNLOAD OU OUTRA MANEIRA QUALQUER DO USER CONSEGUIR TER ACESSO AO HORÁRIO -->
                         1º Semestre
                     </td>
                     <td class="segundo-semestre">
@@ -416,13 +446,14 @@
                         <td><input class="formImput" type="email" placeholder="Email"/></td>
                     </tr>
                     <tr>
-                        <td><input class="formImput" type="text" placeholder="Assunto"/></td>
+                        <td><input class="formImput" id="assunto"  type="text" placeholder="Assunto"/></td>
                     </tr>
                     <tr>
-                        <td><textarea class="formImputText" placeholder="Comentário"></textarea></td>
+                        <td><textarea class="formImputText" id="comentario" placeholder="Comentário"></textarea></td>
                     </tr>
                     <tr>
-                        <td><input class="formImputSubmit" type="submit"></td>
+                        <td>
+                            <input class="formImputSubmit" type="submit"></td>
                     </tr>
                 </table>
             </form>

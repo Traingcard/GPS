@@ -1,6 +1,5 @@
 <?php
-    error_reporting(0);
-    include "../BD/pap.php";
+    include "./BD/bd.php";
 ?>
 
 <!DOCTYPE html>
@@ -151,23 +150,26 @@
 
         <div class="gallery js-flickity"
             data-flickity-options='{ "wrapAround": true }'>
-
-            <php
+            
+            <?php
                     $select="select * from curso";
-                    $result=mysqli_query($ligax,$consulta);
+                    $result=mysqli_query($ligax,$select);
                     $nregistos=mysqli_num_rows($result);
 
                     for ($i=0; $i<$nregistos; $i++)
                     {
                         $registo=mysqli_fetch_assoc($result);
-                        $id_curso=$registo['id_cuso'];
+                        $id_curso=$registo['id_curso'];
+                        $nome=$registo['nome'];
                         $imagem=$registo['imagem'];
 
-                        echo "<div class='gallery-cell'><a href='./About.html'><img id='menu' src='./Imagens/dwdm.png'/></a></div>";
+                        echo "<div class='gallery-cell'><a href='./About.php?id_curso=$id_curso'><img id='menu' src='$imagem'/></a></div>";
                     }
+
+                    //TODO: VER SE ESTÁ LOGADO, SE ESTIVER APARECER A SEGUINTE DIV COM HIPERLIGAÇÃO PARA O ADDCURSO PARA ADICIONAR CURSOS
+                    //<div class='gallery-cell'><a href='./AddCurso.html'><img id='menu' src='./Imagens/Adicionar.png'/></a></div>
             ?>
-            
-            <div class='gallery-cell'><a href='./AddCurso.html'> <img id='menu' src='./Imagens/adicionar.png'/></a> </div>
+  
         </div>
 
         
