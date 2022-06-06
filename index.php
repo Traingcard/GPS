@@ -1,8 +1,13 @@
+<?php
+    error_reporting(0);
+    include "../BD/pap.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
     <head> 
         <title> 
-            <!-- Nome departamento  -->
+            Departamento de Informática
         </title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     </head>
@@ -127,8 +132,6 @@
             flex: 1;
         }
         
-        
-
     </style>
 
 
@@ -148,19 +151,26 @@
 
         <div class="gallery js-flickity"
             data-flickity-options='{ "wrapAround": true }'>
-            <div class="gallery-cell"><a href="./About.html"><img id="menu" src="./Imagens/dwdm.png"/></a></div>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"><a href="./AddCurso.html"> <img id="menu" src="./Imagens/adicionar.png"/></a> </div>
+
+            <php
+                    $select="select * from curso";
+                    $result=mysqli_query($ligax,$consulta);
+                    $nregistos=mysqli_num_rows($result);
+
+                    for ($i=0; $i<$nregistos; $i++)
+                    {
+                        $registo=mysqli_fetch_assoc($result);
+                        $id_curso=$registo['id_cuso'];
+                        $imagem=$registo['imagem'];
+
+                        echo "<div class='gallery-cell'><a href='./About.html'><img id='menu' src='./Imagens/dwdm.png'/></a></div>";
+                    }
+            ?>
+            
+            <div class='gallery-cell'><a href='./AddCurso.html'> <img id='menu' src='./Imagens/adicionar.png'/></a> </div>
         </div>
+
+        
 
         <footer>
             <div class="divTelemovel">
