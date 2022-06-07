@@ -1,5 +1,27 @@
 <?php
     include "./BD/bd.php";
+
+        $id_curso=$_REQUEST['id_curso'];
+
+        $select="select * from curso where id_curso = $id_curso";
+        $result=mysqli_query($conexao,$select);
+        $registo=mysqli_fetch_assoc($result);
+                    
+        $id_curso=$registo['id_curso'];
+        $nome=$registo['nome'];
+        $introducao=$registo['introducao'];
+        $ingresso=$registo['ingresso'];
+        $imagem=$registo['imagem'];
+
+        $selecthorario="SELECT * FROM horario WHERE id_curso = $id_curso";
+        $result1=mysqli_query($conexao,$selecthorario);
+        $registo1=mysqli_fetch_assoc($result1);
+
+        $horario1=$registo1['horario1'];
+        $horario2=$registo1['horario2'];
+        $horario3=$registo1['horario3'];
+        $horario3=$registo1['horario4'];
+            
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +30,9 @@
 
     <head>
         <title>
-            <!--TODO: NOME DO CURSO --> 
+            <?php
+                echo $nome
+            ?>
         </title>
     </head>
 
@@ -347,23 +371,9 @@
         <div class="pag">
             <div class="cursoBanner">
                 <?php
-
-                    $id_curso=$_REQUEST['id_curso'];
-
-                    $select="select * from curso where id_curso = $id_curso";
-                    $result=mysqli_query($conexao,$select);
-                    $registo=mysqli_fetch_assoc($result);
-                    
-                    $id_curso=$registo['id_curso'];
-                    $nome=$registo['nome'];
-                    $introducao=$registo['introducao'];
-                    $ingresso=$registo['ingresso'];
-                    $imagem=$registo['imagem'];
-
-                    echo "<div class='logo' style='background-image: url($imagem);'>"
+                    echo "<div class='logo' style='background-image: url($imagem);'>";
                 ?>
-                
-                </div>
+            </div>
                 <div class="banner">
                     <div id="banner-titulo">
                         <?php 
@@ -407,10 +417,14 @@
                 </tr>
                     <tr>
                         <td class="primeiro-semestre">
-                            Horário 1
+                            <?php 
+                                echo "<a href='$horario1' target='_blank'> Horário 1</a>";
+                            ?>
                         </td>
                         <td class="segundo-semestre">
-                            Horário 2
+                            <?php 
+                                echo "<a href='$horario3' target='_blank'> Horário 1</a>";
+                            ?>
                         </td>
                     </tr>
             </table>
@@ -428,10 +442,14 @@
                 </tr>
                     <tr>
                         <td class="primeiro-semestre">
-                            Horário 1
+                            <?php 
+                                echo "<a href='$horario2' target='_blank'> Horário 2</a>";
+                            ?>
                         </td>
                         <td class="segundo-semestre">
-                            Horário 2
+                            <?php 
+                                echo "<a href='$horario4' target='_blank'> Horário 2</a>";
+                            ?>
                         </td>
                     </tr>
             </table>

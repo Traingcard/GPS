@@ -9,7 +9,7 @@ const middleware = () => {
                 const user = obj.success;
                 if (user.isAdmin == 1) {
                     if (path !== 'AddCurso.php' && path !== 'index.php' && path !== '') {
-                        window.location.href = "./AddCurso.php";
+                        window.location.href = "./AddCurso.html";
                     }
 
                 } else {
