@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06-Jun-2022 às 23:08
--- Versão do servidor: 10.4.24-MariaDB
--- versão do PHP: 8.1.6
+-- Tempo de geração: 07-Jun-2022 às 14:47
+-- Versão do servidor: 10.4.14-MariaDB
+-- versão do PHP: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -66,6 +66,29 @@ CREATE TABLE `imagem` (
   `id_curso` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `utilizador`
+--
+
+CREATE TABLE `utilizador` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `dataNascimento` date DEFAULT NULL,
+  `isAdmin` tinyint(1) DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `utilizador`
+--
+
+INSERT INTO `utilizador` (`id`, `username`, `password`, `email`, `dataNascimento`, `isAdmin`) VALUES
+(1, 'admin', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'admin@admin.com', '2000-04-06', 1),
+(2, 'marco', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'marco@user.com', '2000-04-19', 0);
+
 --
 -- Índices para tabelas despejadas
 --
@@ -89,6 +112,13 @@ ALTER TABLE `imagem`
   ADD PRIMARY KEY (`id_imagem`);
 
 --
+-- Índices para tabela `utilizador`
+--
+ALTER TABLE `utilizador`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`,`email`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
@@ -109,6 +139,12 @@ ALTER TABLE `horario`
 --
 ALTER TABLE `imagem`
   MODIFY `id_imagem` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `utilizador`
+--
+ALTER TABLE `utilizador`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

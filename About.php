@@ -339,7 +339,7 @@
             </div>
 
             <div class="divLogin">
-                <a href="../GPS/login.html"><img class="headerImg" src="Imagens/user.png" alt="Departamento de Informática" ></a>
+                <a href="../GPS/login.php"><img class="headerImg" src="Imagens/user.png" alt="Departamento de Informática" ></a>
             </div>         
         </header>
 
