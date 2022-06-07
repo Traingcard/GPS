@@ -409,7 +409,7 @@
         </div>
 
         <div>
-            <input type="submit">
+            <input type="submit" class="formImputSubmit"/>
     </form> 
         <div class="fromDiv">
 
