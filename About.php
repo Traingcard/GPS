@@ -351,7 +351,7 @@
                     $id_curso=$_REQUEST['id_curso'];
 
                     $select="select * from curso where id_curso = $id_curso";
-                    $result=mysqli_query($ligax,$select);
+                    $result=mysqli_query($conexao,$select);
                     $registo=mysqli_fetch_assoc($result);
                     
                     $id_curso=$registo['id_curso'];
